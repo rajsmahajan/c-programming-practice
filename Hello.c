@@ -1,21 +1,17 @@
 # include<stdio.h>
 
 int main() {
-    int marks;
-    printf("enter marks : ");
-    scanf("%d", &marks);
+    char ch;
 
-     if(marks >= 0 && marks < 30) {
-        printf("C \n");
-    }  else if(marks >= 30 && marks < 70) {
-        printf("B \n");
-     } else if ( marks >= 70 && marks < 90) {
-        printf("A \n");
-     } else if (marks >= 90 && marks <= 100) {
-        printf("A+ \n");
-     } else{
-        printf("incorrect marks \n");
-     }
-    
+    printf("enter a ch :");
+    scanf("%c", &ch);
+    if(ch >= 'A' && ch <= 'Z') {
+      printf("upper case");
+    } else if(ch >= 'a' && ch <= 'z'){
+      printf("lower case");
+    } else{
+      printf("not english \n");
+    }
+
       return 0;
 }

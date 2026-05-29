@@ -1,17 +1,13 @@
-# include<stdio.h>
-
+#include<stdio.h>
 int main() {
-    char ch;
+  int n;
+  printf("enter number = ");
+  scanf("%d", &n);
 
-    printf("enter a ch :");
-    scanf("%c", &ch);
-    if(ch >= 'A' && ch <= 'Z') {
-      printf("upper case");
-    } else if(ch >= 'a' && ch <= 'z'){
-      printf("lower case");
-    } else{
-      printf("not english \n");
-    }
-
-      return 0;
+  int sum;
+  for(int i=1; i<=n; i++) {
+    sum=sum+i;
+  }
+  printf("sum is %d", sum);
+  return 0;
 }

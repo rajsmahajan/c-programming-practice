@@ -1,11 +1,17 @@
 #include<stdio.h>
-#include<math.h>
+
+void CalculatePrice(float value);
 
 int main() {
-    float value;
-    printf("enter a value :");
+    float value ;
+    printf("enter value : ");
     scanf("%f", &value);
-    value = value + (0.18 * value);
-    printf("final price(with GST) is : %f", value); 
+    CalculatePrice(value);
+    printf("value is : %f \n", value);
     return 0;
+}
+
+void CalculatePrice(float value) {
+    value = value + (0.18 * value);
+    printf("final price : %f \n", value);
 }

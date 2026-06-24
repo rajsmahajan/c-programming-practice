@@ -1,20 +1,17 @@
 #include<stdio.h>
 
-int fact(int n);
+float convertTemp(float celsius);
 
 int main() {
-    int n;
-    printf("enter a number : ");
-    scanf("%d", &n);
-    printf("factorial is : %d", fact(n));
+    float n;
+    printf("enter celsius : ");
+    scanf("%f", &n);
+    float far = convertTemp(n);
+    printf("Fahrenheit : %f \n", far);
     return 0;
 }
 
-int fact(int n) {
-    if(n == 1) {
-        return 1;
-    }
-    int factNm = fact(n - 1);
-    int factN = factNm * n;
-    return factN;
+float convertTemp(float celsius) {
+    float far = celsius * (9.0/5.0) + 32;
+    return far;
 }

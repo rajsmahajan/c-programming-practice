@@ -1,10 +1,17 @@
 #include<stdio.h>
-#include<math.h>
+
+void CalculatePrice(float value);
 
 int main() {
-    int n;
+    float value ;
     printf("enter value : ");
-    scanf("%d", &n);
-    printf("square is : %f \n", pow(n,2));
+    scanf("%f", &value);
+    CalculatePrice(value);
+    printf("value is : %f \n", value);
     return 0;
+}
+
+void CalculatePrice(float value) {
+    value = value + (0.18 * value);
+    printf("final price : %f \n", value);
 }

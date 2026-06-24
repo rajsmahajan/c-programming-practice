@@ -1,17 +1,19 @@
 #include<stdio.h>
 
-void CalculatePrice(float value);
+int sum(int n);
 
 int main() {
-    float value ;
-    printf("enter value : ");
-    scanf("%f", &value);
-    CalculatePrice(value);
-    printf("value is : %f \n", value);
+    int n;
+    printf("enter a number : ");
+    scanf("%d", &n);
+    printf("sum is : %d \n", sum(n));
     return 0;
 }
-
-void CalculatePrice(float value) {
-    value = value + (0.18 * value);
-    printf("final price : %f \n", value);
+int sum(int n) {
+    if(n == 1) {
+        return 1;
+    }
+    int sumNm1 = sum(n-1);
+    int sumN = sumNm1 + n;
+    return sumN;
 }

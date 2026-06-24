@@ -1,17 +1,20 @@
 #include<stdio.h>
 
-void CalculatePrice(float value);
+int fact(int n);
 
 int main() {
-    float value ;
-    printf("enter value : ");
-    scanf("%f", &value);
-    CalculatePrice(value);
-    printf("value is : %f \n", value);
+    int n;
+    printf("enter a number : ");
+    scanf("%d", &n);
+    printf("factorial is : %d", fact(n));
     return 0;
 }
 
-void CalculatePrice(float value) {
-    value = value + (0.18 * value);
-    printf("final price : %f \n", value);
+int fact(int n) {
+    if(n == 1) {
+        return 1;
+    }
+    int factNm = fact(n - 1);
+    int factN = factNm * n;
+    return factN;
 }

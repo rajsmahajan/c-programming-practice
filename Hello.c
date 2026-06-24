@@ -1,19 +1,37 @@
 #include<stdio.h>
+#include<math.h>
 
-int sum(int n);
+float triangleArea(float x, float y);
+float rectangleArea(float a, float b);
+
+/* to find area of triangle use x and y.
+   to find area of recrangle use a and b.
+*/
 
 int main() {
-    int n;
-    printf("enter a number : ");
-    scanf("%d", &n);
-    printf("sum is : %d \n", sum(n));
+    printf("-:Area of Triangle:- \n");
+    float x, y;
+    printf("enter x :");
+    scanf("%f", &x);
+    printf("enter y :");
+    scanf("%f", &y);
+    printf("Area of triangle is : %f \n", triangleArea(x,y));
+
+
+    printf("-:Area of Rectangle:- \n");
+    float a, b;
+    printf("enter a : ");
+    scanf("%f", &a);
+    printf("enter b : ");
+    scanf("%f", &b);
+    printf("Area of rectangle is : %f \n", rectangleArea(a,b));
+
     return 0;
 }
-int sum(int n) {
-    if(n == 1) {
-        return 1;
-    }
-    int sumNm1 = sum(n-1);
-    int sumN = sumNm1 + n;
-    return sumN;
+
+float triangleArea(float x, float y) {
+    return 0.5 * x * y;
+}
+float rectangleArea(float a, float b) {
+    return a * b;
 }

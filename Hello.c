@@ -1,28 +1,25 @@
 #include<stdio.h>
 
-float calcuPersentage(float science, float math, float sanskrit, float english, float marathi);
+int fib(int n);
 
 int main() {
-    float science, math, sanskrit, english, marathi;
-    printf("enter marks in science :");
-    scanf("%f", &science);
-
-    printf("enter marks in math : ");
-    scanf("%f", &math);
-
-    printf("enter marks in sanskit : ");
-    scanf("%f", &sanskrit);
-
-    printf("enter marks in english :");
-    scanf("%f", &english);
-
-    printf("enter marks in marathi : ");
-    scanf("%f", &marathi);
-
-    printf("persentage is : %f \n ", calcuPersentage(science, math, sanskrit, english, marathi));  
+    int n;
+    printf("enter  number : ");
+    scanf("%d", &n);
+    printf("%d",fib(n));
     return 0;
 }
 
-float calcuPersentage(float science, float math, float sanskrit, float english, float marathi) {
-    return ((science + math + sanskrit + english + marathi) / 5.0 );  
+int fib(int n) {
+    if(n == 0) {
+        return 0;
+    }
+    if(n == 1) {
+        return 1;
+    }   
+
+    int fibNm1 = fib(n-1);
+    int fibNm2 = fib(n-2);
+    int fibN = fib(n-1) + fib(n-2);
+    return fibN;
 }

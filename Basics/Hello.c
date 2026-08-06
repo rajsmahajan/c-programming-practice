@@ -1,28 +1,22 @@
 #include<stdio.h>
-void introR();
-void introM();
 
 int main() {
-    printf("enter 'R' if you want intro of 'Raj' enter 'M' for intro of 'Moksha':.");
-    char ch;
-    scanf("%c", &ch);
+    int Items[3]; 
+    int total;
+    printf("Enter Price of Item 1 : ");
+    scanf("%d", &Items[0]);
 
-    if(ch == 'R') {
-        introR();
-    }else{
-        introM();
-    }
+    printf("Enter Price of Item 2 : ");
+    scanf("%d", &Items[1]);
+
+    printf("Enter Price of Item 3 : ");
+    scanf("%d", &Items[2]);
+
+    printf("Item 1 = %d, Item 2 = %d, Item 3 =%d\n", Items[0], Items[1], Items[2]);
+
+    total = Items[0]+Items[1]+Items[2];
+    printf("Final Value(with GST):%d\n", total + total * 18 / 100);
+    printf("Thank You:)");
+
     return 0;
-}
-
-void introR() {
-    printf("Hi may name is raj\n");
-    printf("i am studying B.tech in DPGU,Pimpri. \n");
-    printf("i am from chopda, jalgoan\n");
-}
-
-void introM() {
-    printf("hi my name is moksha\n");
-    printf("i am studying in 6th std.\n");
-    printf("i am from chopda,jalgoan\n");
 }

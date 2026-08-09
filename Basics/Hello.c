@@ -1,17 +1,17 @@
 #include<stdio.h>
 
-void printNumbers(int arr[], int n);
-
 int main() {
-    int arr[] = {1,2,3,4,5,6};
-    printNumbers(arr, 6);
+    // 2 x 3
+    int marks[2] [3];
+    marks[0][0] = 88;
+    marks[0][1] = 90;
+    marks[0][2] = 92;
 
-    return 0;}
+    marks[1][0] = 88;
+    marks[1][1] = 90;
+    marks[1][2] = 92;
+    
+    printf("%d", marks[0][2]);
 
-
-void printNumbers(int arr[], int n) {
-    for(int i=0; i < n; i++) {
-        printf("%d \t", arr[i]);
-    }
-    printf("\n");
+    return 0;
 }

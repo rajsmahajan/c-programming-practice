@@ -3,15 +3,15 @@
 int countOdd(int arr[], int n);
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 19, 20};
-    printf("%d", countOdd(arr, 12));
+    int arr[] = {1, 2, 5, 8, 9, 65, 87, 88, 68, 45, 46, 22, 3, 44, 64, 58};
+    printf("%d", countOdd(arr, 16));
     return 0;
 }
 
 int countOdd(int arr[], int n) {
     int count = 0;
     for(int i=0; i < n; i++) {
-        if(arr[i] % 2 != 0){
+        if(arr[i] % 2 == 0){
             count++;
         }
     }

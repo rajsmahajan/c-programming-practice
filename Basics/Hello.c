@@ -1,17 +1,19 @@
 #include<stdio.h>
 
+int countOdd(int arr[], int n);
+
 int main() {
-    // 2 x 3
-    int marks[2] [3];
-    marks[0][0] = 88;
-    marks[0][1] = 90;
-    marks[0][2] = 92;
-
-    marks[1][0] = 88;
-    marks[1][1] = 90;
-    marks[1][2] = 92;
-    
-    printf("%d", marks[0][2]);
-
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 19, 20};
+    printf("%d", countOdd(arr, 12));
     return 0;
+}
+
+int countOdd(int arr[], int n) {
+    int count = 0;
+    for(int i=0; i < n; i++) {
+        if(arr[i] % 2 != 0){
+            count++;
+        }
+    }
+    return count;
 }

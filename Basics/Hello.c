@@ -1,32 +1,25 @@
-#include <stdio.h>
-
-int isPrime(int num);
-int countPrime(int arr[], int n);
+#include<stdio.h>
+void reverse(int arr[], int n);
+void printArr(int arr[], int n);
 
 int main() {
-    int arr[] = {1, 2, 5, 8, 9, 65, 87, 88, 68, 45, 46, 22, 3, 58};
+    int arr[]={1,2,3,4,5,6,7,8,9,10};
+    reverse(arr, 10);
+    printArr(arr, 10);
     
-    printf("%d", countPrime(arr, 16));
     return 0;
 }
-
-int isPrime(int num) {
-    if (num <= 1) return 0;
-
-    for (int i = 2; i * i <= num; i++) {
-        if (num % i == 0) {
-            return 0;
-        }
+void reverse(int arr[], int n) {
+    for(int i=0; i<n/2; i++) {
+        int firstval = arr[i];
+        int secondval = arr[n-i-1];
+        arr[i] = secondval;            
+        arr[n-i-1] = firstval;
     }
-    return 1;
 }
-
-int countPrime(int arr[], int n) {
-    int count = 0;
-    for (int i = 0; i < n; i++) {
-        if (isPrime(arr[i])) {
-            count++;
-        }
+void printArr(int arr[], int n) {
+    for(int i=0; i<n; i++) {
+        printf("%d \t", arr[i]);
     }
-    return count;
+    printf("\n");
 }
